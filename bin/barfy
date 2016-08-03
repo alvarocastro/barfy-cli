@@ -20,7 +20,7 @@ const connect = function (cb) {
 }
 
 const send = function (action, value) {
-	var message = {type: action, id: value};
+	var message = {action, value};
 
 	try {
 		ws.send(JSON.stringify(message));
@@ -40,6 +40,15 @@ vorpal
 		args.value.forEach((value) => {
 			send('audio', value);
 		});
+
+		callback();
+	});
+
+vorpal
+	.command('announce <text...>', 'Hace un anuncio fancy.')
+	.alias('ann')
+	.action(function (args, callback) {
+		send('announce', args.text.join(' '));
 
 		callback();
 	});
