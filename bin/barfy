@@ -32,9 +32,10 @@ var send = function (action, value) {
 };
 
 
+
 vorpal
 	.command('audio <value...>', 'Reproduce crap.')
-	.autocomplete(['aguanta', 'botellero', 'dale-ingrid', 'wololo'])
+	.autocomplete(['aguanta', 'botellero', 'dale-ingrid', 'me-gusta-el-arte', 'wololo'])
 	.alias('a')
 	.action(function (args, callback) {
 		args.value.forEach(function (value) {
@@ -77,7 +78,7 @@ vorpal.log('\n\
     / ____ /\\   / ____  /\\  / ____ /\\   / ______/\\  /_/\\ _/_/\\\n\
    / /\\__/_/\\  / /\\__/ / / / /\\__/ /\\  / /\\_____\\/  /_/\\/_/\\\\/\n\
   / ____ /\\\\/ / ____  / / / ____ /\\\\/ / _____/\\     / /_/\\\\/\n\
- / /\\__/_/\\  / /\\__/ / / / /\\  / /\\  / /\\____\\/     / /\\\\/\n\
+ / /\\__/_/\\  / /\\__/ / / / /\\__/ /\\  / /\\____\\/     / /\\\\/\n\
 /______/\\\\/ /_/ / /_/ / /_/ / /_/ / /_/ /          /_/ /\n\
 \\______\\/   \\_\\/  \\_\\/  \\_\\/  \\_\\/  \\_\\/           \\_\\/\n\
 ');

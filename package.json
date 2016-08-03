@@ -1,10 +1,12 @@
 {
   "name": "barfy-cli",
-  "version": "1.2.0-angryserpent",
+  "version": "1.2.1-roughsardine",
   "description": "",
   "main": "bin/barfy",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minor": "node versionator.js minor;git st;git add --all;git ci -m.;git push;npm publish",
+    "patch": "node versionator.js patch;git st;git add --all;git ci -m.;git push;npm publish"
   },
   "repository": {
     "type": "git",
