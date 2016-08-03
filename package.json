@@ -18,6 +18,9 @@
   "bugs": {
     "url": "https://github.com/alvarocastro/barfy-cli/issues"
   },
+  "engines": {
+    "node" : ">=4"
+  },
   "homepage": "https://github.com/alvarocastro/barfy-cli#readme",
   "dependencies": {
     "vorpal": "^1.11.3",
