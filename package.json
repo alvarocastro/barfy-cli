@@ -1,6 +1,6 @@
 {
   "name": "barfy-cli",
-  "version": "1.0.5-criticalfalcon",
+  "version": "1.0.6-crueltiger",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/alvarocastro/barfy-cli#readme",
   "dependencies": {
+    "shelljs": "^0.7.3",
     "vorpal": "^1.11.3",
     "vorpal-repl": "^1.1.8",
     "ws": "^1.1.1"
