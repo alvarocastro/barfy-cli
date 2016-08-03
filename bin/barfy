@@ -1,31 +1,31 @@
 #!/usr/bin/env node
 
-const WebSocket = require('ws'),
+var WebSocket = require('ws'),
 	Vorpal = require('vorpal'),
 	repl = require('vorpal-repl');
 	version = require('../package.json').version;
 
-const vorpal = Vorpal();
-var ws;
+var vorpal = Vorpal(),
+	ws;
 
-const connect = function (cb) {
+var connect = function (cb) {
 	ws = new WebSocket('ws://barfy-server.herokuapp.com');
 
 	ws.on('open', function () {
-		(cb || () => {})();
+		(cb || function () {})();
 	});
 	ws.on('error', function (message) {
 		vorpal.log('ERROR: %s', message);
 	});
-}
+};
 
-const send = function (action, value) {
+var send = function (action, value) {
 	var message = {action, value};
 
 	try {
 		ws.send(JSON.stringify(message));
 	} catch (e) {
-		connect(() => {
+		connect(function () {
 			send(action, value);
 		});
 	}
@@ -37,7 +37,7 @@ vorpal
 	.autocomplete(['aguanta', 'botellero', 'dale-ingrid', 'wololo'])
 	.alias('a')
 	.action(function (args, callback) {
-		args.value.forEach((value) => {
+		args.value.forEach(function (value) {
 			send('audio', value);
 		});
 
@@ -67,17 +67,17 @@ vorpal
 	.use(repl)
 	.show();
 
-vorpal.log(`
-                            .-""""-.
-                           /' .  '. \\
-                          (\`-..:...-')
-                           ;-......-;
-                            '------'    ${version}
-     _______     ________    _______     ________    __    __
-    / ____ /\\   / ____  /\\  / ____ /\\   / ______/\\  /_/\\ _/_/\\
-   / /\\__/_/\\  / /\\__/ / / / /\\__/ /\\  / /\\_____\\/  /_/\\/_/\\\\/
-  / ____ /\\\\/ / ____  / / / ____ /\\\\/ / _____/\\     / /_/\\\\/
- / /\\__/_/\\  / /\\__/ / / / /\\  / /\\  / /\\____\\/     / /\\\\/
-/______/\\\\/ /_/ / /_/ / /_/ / /_/ / /_/ /          /_/ /
-\\______\\/   \\_\\/  \\_\\/  \\_\\/  \\_\\/  \\_\\/           \\_\\/
-`);
+vorpal.log('\n\
+                            .-""""-.\n\
+                           /\' .  \'. \\\n\
+                          (`-..:...-\')\n\
+                           ;-......-;\n\
+                            \'------\'    ' + version + '\n\
+     _______     ________    _______     ________    __    __\n\
+    / ____ /\\   / ____  /\\  / ____ /\\   / ______/\\  /_/\\ _/_/\\\n\
+   / /\\__/_/\\  / /\\__/ / / / /\\__/ /\\  / /\\_____\\/  /_/\\/_/\\\\/\n\
+  / ____ /\\\\/ / ____  / / / ____ /\\\\/ / _____/\\     / /_/\\\\/\n\
+ / /\\__/_/\\  / /\\__/ / / / /\\  / /\\  / /\\____\\/     / /\\\\/\n\
+/______/\\\\/ /_/ / /_/ / /_/ / /_/ / /_/ /          /_/ /\n\
+\\______\\/   \\_\\/  \\_\\/  \\_\\/  \\_\\/  \\_\\/           \\_\\/\n\
+');

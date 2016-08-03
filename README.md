@@ -22,4 +22,4 @@ entrypoint for all the functionality mentioned above.
 
 You can call **barfy** to find out more about all of the commands.
 
-Enter the [barfy zone](http://barfy.surge.sh) to unleash all your cli power.
+Enter the [barfy zone](http://barfy.surge.sh) to unleash all your cli power and feel the **barfy experience**.
