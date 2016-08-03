@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "barfy": "barfy"
+    "barfy": "bin/barfy"
   },
   "bugs": {
     "url": "https://github.com/alvarocastro/barfy-cli/issues"
