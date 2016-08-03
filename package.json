@@ -20,10 +20,8 @@
   },
   "homepage": "https://github.com/alvarocastro/barfy-cli#readme",
   "dependencies": {
-    "inquirer": "^1.1.2",
     "vorpal": "^1.11.3",
     "vorpal-repl": "^1.1.8",
-    "ws": "^1.1.1",
-    "yargs": "^4.8.1"
+    "ws": "^1.1.1"
   }
 }
