@@ -3,7 +3,7 @@
 const WebSocket = require('ws'),
 	Vorpal = require('vorpal'),
 	repl = require('vorpal-repl');
-	version = require('./package.json').version;
+	version = require('../package.json').version;
 
 const vorpal = Vorpal();
 var ws;
