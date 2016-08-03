@@ -1,6 +1,6 @@
 {
   "name": "barfy-cli",
-  "version": "1.0.2-redpelican",
+  "version": "1.0.2",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "url": "https://github.com/alvarocastro/barfy-cli/issues"
   },
   "engines": {
-    "node" : ">=4"
+    "node": ">=4"
   },
   "homepage": "https://github.com/alvarocastro/barfy-cli#readme",
   "dependencies": {
