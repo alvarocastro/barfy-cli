@@ -1,6 +1,6 @@
 {
   "name": "barfy-cli",
-  "version": "1.1.4-proudparrot",
+  "version": "1.1.5-coarsealligator",
   "description": "",
   "main": "bin/barfy",
   "scripts": {
