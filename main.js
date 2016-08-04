@@ -71,7 +71,7 @@ var startCli = function (contents) {
 
 var bootstrap = function (cb) {
 		vorpal.log('Loading contents...');
-		return request({url: 'http://localhost:8080/contents.json', json: true}, (cb || function () {}));
+		return request({url: 'http://barfy.surge.sh:8080/contents.json', json: true}, (cb || function () {}));
 	},
 	checkVersion = function () {
 		request({url: 'https://raw.githubusercontent.com/alvarocastro/barfy-cli/master/package.json', json: true}, function (error, response, body) {

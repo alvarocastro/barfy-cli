@@ -1,6 +1,6 @@
 {
   "name": "barfy-cli",
-  "version": "1.4.0-hoarsesquirrel",
+  "version": "1.4.1-plainkangaroo",
   "description": "",
   "main": "bin/barfy",
   "scripts": {
