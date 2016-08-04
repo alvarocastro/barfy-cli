@@ -4,7 +4,7 @@ var WebSocket = require('ws'),
 	Vorpal = require('vorpal'),
 	repl = require('vorpal-repl'),
 	request = require('request'),
-	version = require('../package.json').version;
+	version = require('./package.json').version;
 
 var vorpal = Vorpal(),
 	ws;
@@ -38,8 +38,8 @@ var checkVersion = function () {
 			var newVersion = body.version;
 
 			if (newVersion != version) {
-				vorpal.log('Hay una nueva version ' + newVersion + ' disponible');
-				vorpal.log('Tirate un npm install -g barfy-cli');
+				vorpal.log('! Hay una nueva version ' + newVersion + ' disponible');
+				vorpal.log('! Tirate un npm install -g barfy-cli');
 			} else {
 				setTimeout(checkVersion, 1000 * 60 * 5);
 			}

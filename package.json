@@ -1,6 +1,6 @@
 {
   "name": "barfy-cli",
-  "version": "1.2.1-roughsardine",
+  "version": "1.3.0-mistycayman",
   "description": "",
   "main": "bin/barfy",
   "scripts": {
@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "barfy": "bin/barfy"
+    "barfy": "main.js"
   },
   "bugs": {
     "url": "https://github.com/alvarocastro/barfy-cli/issues"
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/alvarocastro/barfy-cli#readme",
   "dependencies": {
+    "request": "^2.74.0",
     "shelljs": "^0.7.3",
     "vorpal": "^1.11.3",
     "vorpal-repl": "^1.1.8",
