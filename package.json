@@ -1,6 +1,6 @@
 {
   "name": "barfy-cli",
-  "version": "1.4.3-guiltyhawk",
+  "version": "1.4.4-firsttoad",
   "description": "",
   "main": "bin/barfy",
   "scripts": {
