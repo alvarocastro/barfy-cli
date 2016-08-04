@@ -1,10 +1,11 @@
 {
   "name": "barfy-cli",
-  "version": "1.3.0-mistycayman",
+  "version": "1.3.1-fastbadger",
   "description": "",
   "main": "bin/barfy",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "major": "node versionator.js major;git st;git add --all;git ci -m.;git push;npm publish",
     "minor": "node versionator.js minor;git st;git add --all;git ci -m.;git push;npm publish",
     "patch": "node versionator.js patch;git st;git add --all;git ci -m.;git push;npm publish"
   },
