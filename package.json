@@ -1,6 +1,6 @@
 {
   "name": "barfy-cli",
-  "version": "1.4.1-plainkangaroo",
+  "version": "1.4.2-frigidcoyote",
   "description": "",
   "main": "bin/barfy",
   "scripts": {
