@@ -55,6 +55,17 @@ var startCli = function (contents) {
 			});
 
 		vorpal
+			.command('youtube <id...>', 'Reproduce un video de youtube.')
+			.alias('yt')
+			.action(function (args, callback) {
+				args.id.forEach(function (id) {
+					send('youtube', id);
+				});
+
+				callback();
+			});
+
+		vorpal
 			.command('stop')
 			.alias('s')
 			.action(function (args, callback) {
